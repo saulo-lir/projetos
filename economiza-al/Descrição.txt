@@ -1,0 +1,25 @@
+### Scripts PHP para utilização da API de consulta de preços da SEFAZ/AL ###
+
+São 3 os métodos disponibilizados pela api:
+
+1) Consultar Preço de um Produto em um Estabelecimento
+
+consultarPrecoProdutoEmEstabelecimento()
+
+- Retorna um registro
+
+2) Consultar Preço de um Produto pela descrição
+
+consultarPrecosPorDescricao()
+
+- Retorna vários registros que possuem a palavra pesquisada.
+Dessa forma, o resultado pode ser os mais diversos produtos possíveis,
+pois cada estabelecimento tem uma forma de descerever seus produtos.
+
+
+3) Consultar Preço de um Produto pelo código de barras
+
+consultarPrecosPorCodigoDeBarras()
+
+- Semelhante ao método anterior, retorna vários registros, porém de um mesmo produto,
+pois um produto pode usar o mesmo código de barras em diversos estabelecimentos.

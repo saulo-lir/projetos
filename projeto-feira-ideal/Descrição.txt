@@ -1,0 +1,1 @@
+### Sistema web de consulta de preços em estabelecimentos comerciais de Alagoas, utilizando a api da SEFAZ/AL ###

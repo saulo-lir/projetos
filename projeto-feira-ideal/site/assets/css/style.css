@@ -1,0 +1,300 @@
+
+body{
+	color:#707070;
+}
+
+
+.login-form{
+	background-color:#FFF;
+	margin:auto;
+	margin-top:8%;
+	width:420px;
+	padding:20px;
+	box-shadow: 0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.28);
+	border-radius:5px;
+	min-height: 400px;
+}
+
+#login button{
+	width:100%;
+}
+
+.form-group span{
+	color:#5bc0de;
+}
+
+.topo{
+	width:100%;
+	min-height:165px;
+	background-size: cover;
+}
+.logo{
+	width: 100px;
+	height: 35px;
+	margin:auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.menu{
+	padding: 10px;	
+}
+
+.menu button{
+	width:45px;
+	height: 45px;
+	border-radius: 50%;
+}
+
+.menu i{
+	font-size: 20px;
+	color:#707070;
+}
+
+.detalhes-style{
+	background-color: rgba(255, 255, 255, 0.8);
+	background:linear-gradient( to right, transparent, #FFF, transparent );	
+	min-height: 55px;	
+	font-weight: bold;
+	margin-bottom: 5px;
+
+}
+
+.titulos{
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-bottom-color: #E6E6FA;	
+}
+
+.titulo-1{
+	border-right-style: solid;
+	border-right-width: 1px;
+	border-right-color: #E6E6FA;
+}
+
+.content{
+	width: 100%;
+	height:370px;	
+	overflow: auto;
+}
+
+
+.produto-lista{
+	border-right-style: solid;
+	border-right-width: 1px;
+	border-right-color: #E6E6FA;	
+}
+
+.produto-detalhes{	
+	
+}
+
+.painel-calculo{	
+	background-color: #FFF;
+	width:100%;
+	height: 90px;
+	line-height: 90px;
+	bottom:0;
+	position: fixed;
+	box-shadow:0 -2px 14px -6px #000000;
+	z-index:3;
+}
+
+.painel-calculo button{
+	margin-top: 20px;
+	width:100%;
+}
+
+.total p{
+	font-size:40px;
+}
+
+.total span{
+	margin-left: 20px;
+	font-size:48px;
+}
+
+/* style para o botão de ícone de impressora
+.imprimir{
+	font-size:50px;
+	padding-top: 20px;
+	padding-right: 40px;
+	text-align: right;
+}
+*/
+
+.imprimir{
+	font-size:18px;	
+}
+
+.imprimir a{
+	text-decoration: none;
+	font-weight: bold;
+	color:#CD5555;	
+	/*color:#696969;*/
+}
+
+.imprimir a:hover{
+	color:#FF6A6A;
+	/*color:#333;*/
+	
+}
+
+.imprimir i{
+	font-size:24px;
+}
+
+.btn-circle {
+    width: 30px;
+    height: 30px;
+    padding: 6px 0px;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 12px;
+    line-height: 1.42857;
+}
+
+
+.btns-action .btn-danger{
+	margin-left: 30px;
+}
+
+#lista-produtos input{
+	font-size: 16px;
+}
+
+
+/* Largura das colunas da tabela de detalhes dos produtos */
+.td-quant{
+	width:30px;
+}
+
+.td-quant input{
+	width:30px;
+}
+
+.ui-spinner-input{
+	width:30px;
+}
+
+.td-nome{
+	width: 420px;
+}
+
+.td-data{
+	width:240px;
+}
+
+.td-preco{
+	width:120px;
+}
+/* Largura das colunas da tabela de detalhes dos produtos */
+
+.search-fail{
+	text-align: center;
+	font-weight: bold;
+}
+
+.search-fail i{
+	font-size:20px;
+	margin-left:10px;
+}
+
+.loja{
+	padding-top: 20px;		
+}
+
+.loja a{
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 15px;
+} 
+
+
+#map{
+	height: 60%;
+}
+
+.mapa-loja{
+	max-height: 400px;
+}
+
+.alert-input{
+	margin-left:10px;
+	font-weight: bold;
+	color:#FF0000;
+	margin-bottom: 0px;
+	display:none;
+}
+
+#alert-select{
+	font-weight: bold;
+	color:#FF0000;
+	margin-bottom: 0px;
+	display:none;
+}
+
+/* Barra lateral styles */
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 9;
+    top: 0;
+    left: 0;
+    background-color: #FFF;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 20px 8px 20px 32px;
+    text-decoration: none;
+    font-size: 18px;
+    color:#707070;
+    display: block;
+    transition: 0.3s;        
+}
+
+.sidenav a:hover {
+    background-color: #337ab7;
+    color:#FFF;
+}
+
+
+.sidenav .side-top{
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 25px;
+}
+
+.sidenav .closebtn{	           
+    transition: 0.3s;            
+    font-size: 36px;
+    margin-left: 35px;    
+    cursor:pointer;    
+}
+
+.closebtn:hover{
+	color:#f1f1f1;
+}
+
+#bgbox{
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Os 3 primeiros parâmetros são a cor, e o 4 parâmetro é a tranparência */
+    display: none;
+    z-index: 5;
+}
+
+@media screen and (max-height: 450px) {
+  
+}
+
+/* Barra lateral styles */

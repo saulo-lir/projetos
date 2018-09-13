@@ -1,0 +1,97 @@
+
+body{
+	background-image:url('../img/main.jpg');
+	background-repeat:no-repeat;
+}
+
+.main-form{
+	background-color:#FFF;
+	margin:auto;
+	margin-top:5%;
+	width:70%;
+	padding:20px;
+	box-shadow: 0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.28);
+	border-radius:5px;
+}
+
+.system-container{
+	background-color:#FFF;
+	margin:auto;	
+	padding:20px;
+	box-shadow: 0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.28);
+	border-radius:5px;
+}
+
+.btn{
+	width:100%;	
+}
+
+.login-form{
+	border-right-style: solid;
+	border-right-width: 1px;
+	border-right-color: #CDC9C9;
+}
+
+.aviso-input{
+	color: #FF0000;
+	font-weight: bold;
+	margin-left:5px;
+}
+
+.congratulations{
+	height:440px;
+	padding-top:60px;
+}
+
+.congratulations h2{
+	color:#5bc0de;
+}
+
+.congratulations h4{
+	color:#5bc0de;
+}
+
+.congratulations .btn{
+	margin-top:80px;
+	width:60%;
+}
+
+@media screen and (max-width: 768px){
+	
+	#btn-cadastrar-mais{
+		font-size:12px;
+	}
+
+}
+
+.navbar ul{
+	font-size:20px;	
+}
+
+.navbar-inverse .navbar-nav>li>a{
+	color:#D3D3D3;
+}
+
+#form-perfil{	
+	margin-top:30px;
+}
+
+#form-perfil .btn{
+	width:20%;
+}
+
+#info-perfil{
+	text-align: center;
+}
+
+#info-perfil .btn{
+	width:60%;
+}
+
+input[type='file']{
+	display:none;
+}
+
+#btn-submit{
+	display:none;
+}
