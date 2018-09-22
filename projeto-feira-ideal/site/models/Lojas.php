@@ -5,7 +5,7 @@ class Lojas extends model{
 	public function getLojas(){
 		$dados = array();
 
-		$sql = "SELECT cnpj, nome_fantasia, ativo FROM estabelecimentos ORDER BY nome_fantasia";
+		$sql = "SELECT cnpj, razao_social, nome_fantasia, ativo FROM estabelecimentos";
 		$sql = $this->db->query($sql);
 
 		if($sql->rowCount() > 0){

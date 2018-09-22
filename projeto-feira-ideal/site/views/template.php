@@ -24,6 +24,7 @@
     <script type='text/javascript' src='<?= BASE_URL ?>assets/js/bootstrap.min.js'></script>
     <script type='text/javascript' src='<?= BASE_URL ?>assets/js/jquery-ui.min.js'></script>
     <script type='text/javascript' src='<?= BASE_URL ?>assets/js/script.js'></script>
+    <script type='text/javascript' src='<?= BASE_URL ?>assets/js/notify.min.js'></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=API_KEY"></script>
   </body>
 </html>

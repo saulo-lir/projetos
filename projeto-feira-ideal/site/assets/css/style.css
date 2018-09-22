@@ -30,10 +30,9 @@ body{
 }
 .logo{
 	width: 100px;
-	height: 35px;
-	margin:auto;
-	margin-top: 10px;
-	margin-bottom: 10px;
+	height: 60px;
+	padding-top: 5px;
+	margin:auto;	
 }
 
 .menu{
@@ -49,6 +48,11 @@ body{
 .menu i{
 	font-size: 20px;
 	color:#707070;
+}
+
+.estabelecimentos-list{
+	margin-top: 5px;
+	margin-bottom: 7px;
 }
 
 .detalhes-style{
@@ -89,6 +93,7 @@ body{
 	
 }
 
+/* Painel cálculo styles */
 .painel-calculo{	
 	background-color: #FFF;
 	width:100%;
@@ -114,35 +119,38 @@ body{
 	font-size:48px;
 }
 
-/* style para o botão de ícone de impressora
-.imprimir{
-	font-size:50px;
-	padding-top: 20px;
-	padding-right: 40px;
-	text-align: right;
-}
-*/
 
-.imprimir{
-	font-size:18px;	
+.actions{	
+	padding-top: 10px;		
 }
 
-.imprimir a{
+.actions a{
 	text-decoration: none;
 	font-weight: bold;
-	color:#CD5555;	
-	/*color:#696969;*/
-}
-
-.imprimir a:hover{
-	color:#FF6A6A;
-	/*color:#333;*/
 	
 }
 
-.imprimir i{
-	font-size:24px;
+.actions i{
+	font-size:30px;
 }
+
+#salvar-feira{
+	margin-right: 30px;	
+	color:#4876FF;		
+}
+
+#salvar-feira:hover{	
+	color:#27408B;
+}
+
+#imprimir-feira{
+	color:#5cb85c;
+}
+
+#imprimir-feira:hover{
+	color:#458B00;
+}
+/* Painel cálculo styles */
 
 .btn-circle {
     width: 30px;
@@ -268,7 +276,7 @@ body{
 	display: block;
 	position: absolute;
 	top: 0;
-	right: 25px;
+	right: 25px;	
 }
 
 .sidenav .closebtn{	           
@@ -298,3 +306,20 @@ body{
 }
 
 /* Barra lateral styles */
+
+
+/* Modal salvar feira Styles*/
+#dialog-confirm{
+	display:none;
+}
+
+.ui-widget-header{
+	background-color: #337ab7;
+	color:#FFF;
+	font-size:18px;
+}
+
+.ui-dialog-content input{
+	font-size:18px;
+	margin-top: 25px;
+}

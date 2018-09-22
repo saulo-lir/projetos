@@ -6,7 +6,7 @@ class homeController extends controller{
 
   	if(empty($_SESSION['login'])){
 
-  		header('Location: http://localhost/projeto-feira-ideal/site/');
+  		header('Location: http://localhost/projetos_local/projeto-feira-ideal/site/');
   		exit;
   	}  	
 
@@ -22,7 +22,7 @@ class homeController extends controller{
   public function logout(){
 
     unset($_SESSION['login']);
-    header('Location: http://localhost/projeto-feira-ideal/site');
+    header('Location: http://localhost/projetos_local/projeto-feira-ideal/site');
     exit;
   }
 

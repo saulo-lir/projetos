@@ -24,7 +24,7 @@ class usuariosController extends controller{
   	header("Content-Type: application/json");
   	echo json_encode($array);
 
-  	// url: http://localhost/projeto-feira-ideal/api/usuarios/login
+  	// url: http://localhost/projetos_local/projeto-feira-ideal/api/usuarios/login
 
   } 
 

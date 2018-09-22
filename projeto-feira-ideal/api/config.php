@@ -3,7 +3,7 @@ require 'environment.php';
 $config = array();
 
 if(ENVIRONMENT == 'development'){
-  define('BASE_URL', 'http://localhost/projeto-feira-ideal/api/');
+  define('BASE_URL', 'http://localhost/projetos_local/projeto-feira-ideal/api/');
   $config['dbname'] = 'feira_ideal';
   $config['host'] = 'localhost';
   $config['charset'] = 'utf8';

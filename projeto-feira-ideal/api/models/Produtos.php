@@ -2,7 +2,30 @@
 
 class Produtos extends model{
 
-	public function getProduto($cnpj, $codBarrasProduto){	
+	public function getProduto($cnpj, $codBarrasProduto){
+		$produto = [];
+
+		$sql = $this->db->prepare("SELECT dscProduto, valUltimaVenda, dthEmissaoUltimaVenda FROM produtos WHERE cnpj_estabelecimento = :cnpj AND cod_barras = :codBarrasProduto");
+		$sql->bindValue(":cnpj", $cnpj);
+		$sql->bindValue(":codBarrasProduto", $codBarrasProduto);
+		$sql->execute();
+
+		if($sql->rowCount() > 0){
+			$produto = $sql->fetch();	
+
+			$produto['valUltimaVenda'] = (float)$produto['valUltimaVenda'];		
+			$produto['dthEmissaoUltimaVenda'] = date('d/m/Y \à\s H:i:s', strtotime($produto['dthEmissaoUltimaVenda']));
+		
+		}else{
+			$produto = false;
+		}
+
+		return $produto;
+	}
+
+
+	// Selecionar produto na api da sefaz
+	public function getProdutoAPI($cnpj, $codBarrasProduto){	
 
 		$resultado = [];
 		$ch = curl_init();
@@ -46,6 +69,28 @@ class Produtos extends model{
 			return false;
 		}						
 
-	}	
+	}
+
+	public function registrarPesquisa($registro=array()){
+
+		$count = count($registro['cod_barras']);		
+
+		for($i=0;$i<$count;$i++){
+
+			$sql = $this->db->prepare("INSERT INTO log_consultas SET user_id = :user_id, nome_feira = :nome_feira, cnpj_estabelecimento = :cnpj, cod_barras = :cod_barras, quantidade = :quantidade, dscProduto = :dscProduto, valUltimaVenda = :valUltimaVenda, dthEmissaoUltimaVenda = :dthEmissaoUltimaVenda, data_consulta = NOW()");
+		
+			$sql->bindValue(':user_id', $registro['id_user']);
+			$sql->bindValue(':nome_feira', $registro['nome_feira']);
+			$sql->bindValue(':cnpj', $registro['cnpj']);
+			$sql->bindValue(':cod_barras', $registro['cod_barras'][$i]);
+			$sql->bindValue(':quantidade', $registro['quantidade'][$i]);
+			$sql->bindValue(':dscProduto', $registro['descricao'][$i]);
+			$sql->bindValue(':valUltimaVenda', $registro['preco'][$i]);
+			$sql->bindValue(':dthEmissaoUltimaVenda', $registro['ult_registro'][$i]);
+			$sql->execute();
+
+		}		
+
+	}
 
 }

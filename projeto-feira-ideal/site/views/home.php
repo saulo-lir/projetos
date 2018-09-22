@@ -1,6 +1,7 @@
 
 <?php 
 	require 'menu/side_bar.php';
+	$idUser = base64_encode($_SESSION['login']);		
 ?>
 
 <div class='topo' style='background-image: url(<?= BASE_URL ?>assets/img/topo.jpg)'>
@@ -14,11 +15,11 @@
 			<div class='col-md-4 col-md-offset-1'>
 
 				<div class='logo'>
-					<img src=""/>
+					<img src="<?=BASE_URL?>assets/img/logo.png" width="90px" height="50px"/>
 				</div>	
 
 
-				<div class='form-group'>
+				<div class='estabelecimentos-list'>
 					<p id="alert-select">Campo Obrigatório!</p>
 					<select id='estabelecimento' class='form-control'>
 						<option>ESCOLHA UM ESTABELECIMENTO:</option>
@@ -28,7 +29,7 @@
 								if($loja['ativo'] == 1){
 						?>
 
-							<option value='<?= $loja['cnpj'] ?>'><?= $loja['nome_fantasia'] ?></option>
+							<option value='<?= $loja['cnpj'] ?>'><?= ($loja['nome_fantasia'])?''.$loja['nome_fantasia'].'':''.$loja['razao_social'].''; ?></option>
 
 						<?php 
 
@@ -116,7 +117,7 @@
 
 <div class='painel-calculo'>
 	<div class='container-fluid'>
-		<div class='row'>
+		<div class='row'>			
 
 			<div class='col-md-3'>
 				
@@ -128,14 +129,26 @@
 				<p>Total: R$<span id='valor-total'>0,00</span></p>
 			</div>					
 
-			<div class='col-md-3 imprimir'>
-				
-				<a href='javascript:void(0);' id='imprimir-feira'>
-					<p>Imprimir Feira Ideal <i class="far fa-file-pdf"></i></p>
+			<div class='col-md-3 actions'>
+
+				<a href='javascript:void(0);' onclick='salvarFeira(<?='"'.$idUser.'"'?>);' id='salvar-feira' title='Salvar Feira Ideal'>
+					<i class="fas fa-save"></i>
 				</a>
+				
+				<a href='javascript:void(0);' id='imprimir-feira' title='Imprimir Feira Ideal'>
+					<i class="fas fa-print"></i>
+				</a>				
 
 			</div>						
 
 		</div>
 	</div>
+</div>
+
+<!-- Modal para salvar o nome da feira -->
+
+<div id="dialog-confirm" title="Digite um Nome para essa Feira:"> 
+
+  <input type="text" id="nome-feira" class="form-control" placeholder="Ex.: Feira Janeiro">
+
 </div>

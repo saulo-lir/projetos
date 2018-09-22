@@ -1,6 +1,6 @@
 <style>
 	body{
-		background-image:url('http://localhost/projeto-feira-ideal/site/assets/img/background.jpg');
+		background-image:url('http://localhost/projetos_local/projeto-feira-ideal/site/assets/img/background.jpg');
 		background-size: cover;
 	}
 </style>
@@ -9,13 +9,16 @@
 	<div class='login-form'>
 
 		<div class='row'>
-			<div class='col-md-12'>
-				<h4>Logo</h4>
+			<div class='col-md-12 text-center'>
+				<img src="<?=BASE_URL?>assets/img/logo.png" width="130px" height="70px" title="Feira Ideal"/>
 			</div>
 		</div>
 
-		<div class='row' style='margin-top: 60px'>
+		<div class='row' style="margin-top: 50px">
 			<div class='col-md-12'>
+
+				<div id="alert-login"></div>
+
 				<form id='login' type='POST'>
 
 					<div class='form-group'>
